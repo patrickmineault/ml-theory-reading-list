@@ -1,6 +1,6 @@
 # Annotated reading list for ML theory
 
-An annotated reference list of ML theory. I didn’t compile this list! All the credit goes to Aditi Raghunathan and her reading list for the course [Theoretical and Empirical Foundations of Modern Machine Learning (2022)](https://www.cs.cmu.edu/~aditirag/teaching/15-884F22.html). I simply generated summaries via ChatGPT-4 with the Link Reader plugin and assembled the summaries into this list.
+An annotated reference list of ML theory. I didn’t compile this list! All the credit goes to Aditi Raghunathan and her reading list for the course [Theoretical and Empirical Foundations of Modern Machine Learning (2022)](https://www.cs.cmu.edu/~aditirag/teaching/15-884F22.html). I simply generated summaries via ChatGPT-4 with the Link Reader plugin and assembled the summaries into this list. You can also download a CSV with the references to import into your citation manager.
 
 ## Generalization
 

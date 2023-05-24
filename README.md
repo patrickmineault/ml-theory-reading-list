@@ -246,7 +246,7 @@ Publication: arXiv
 - The authors also investigate the model's ability to generalize from the training data and perform tasks that are not explicitly present in the training data.
 - The paper concludes that while large language models like GPT-3 have impressive capabilities, there are still many tasks where they fall short, indicating the need for further research and development in this field.
 
-**On the dangers of stochastic parrots: can language models be too big?** **[(link)](https://dl.acm.org/doi/pdf/10.1145/3442188.3445922)**
+**[On the dangers of stochastic parrots: can language models be too big?](https://dl.acm.org/doi/pdf/10.1145/3442188.3445922)**
 Authors: Emily M. Bender, Timnit Gebru, Angelina McMillan-Major, Shmargaret Shmitchell
 Publication: [FAccT '21](https://dl.acm.org/doi/proceedings/10.1145/3442188)
 

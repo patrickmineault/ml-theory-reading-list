@@ -24,14 +24,14 @@ Publication: arXiv
 - The paper suggests that these findings could have significant implications for neural network initialization and for understanding why large, over-parameterized networks are easier to train.
 - The authors conclude by proposing future research directions, including the exploration of whether these principles apply to other forms of networks and tasks, and how these "winning tickets" can be found more efficiently.
 
-**[Exploring Generalization in Deep Learning](https://proceedings.neurips.cc/paper/2017/file/10ce03a1ed01077e3e289f3e53c72813-Paper.pdf)**
+[**[Exploring Generalization in Deep Learning](https://proceedings.neurips.cc/paper/2017/file/10ce03a1ed01077e3e289f3e53c72813-Paper.pdf)**
 Authors: Chiyuan Zhang, Samy Bengio, Moritz Hardt, Benjamin Recht, Oriol Vinyals (2017)
 Publication: NIPS Proceedings
 
 - The paper investigates the generalization capabilities of deep learning models, specifically questioning the traditional view that a model's ability to generalize well is tied to its capacity (number of parameters).
 - The authors demonstrate that deep learning models can perfectly fit random labels, a surprising result given that this should theoretically lead to poor generalization.
 - They further show that explicit regularization techniques (like weight decay or dropout) do not significantly improve generalization performance.
-- The paper concludes that these findings challenge our understanding of deep learning's generalization abilities and call for a rethinking of the theoretical foundations of deep learning.
+- The paper concludes that these findings challenge our understanding of deep learning's generalization abilities and call for a rethinking of the theoretical foundations of deep learning.](https://proceedings.neurips.cc/paper/2017/file/10ce03a1ed01077e3e289f3e53c72813-Paper.pdf)
 
 **[The Implicit Bias of Gradient Descent on Separable Data](https://www.jmlr.org/papers/volume19/18-188/18-188.pdf)**
 Authors: Daniel Soudry, Elad Hoffer, Mor Shpigel Nacson, Suriya Gunasekar, Nathan Srebro (2018)
@@ -66,15 +66,16 @@ Publication: arXiv
 
 ## Robustness
 
-**[A universal law of robustness via isoperimetry](https://arxiv.org/pdf/2105.12806.pdf)**
-Authors: Daniel M. Roy, Ilya O. Ryzhov (2022)
-Publication: arXiv
+**[A Universal Law of Robustness via Isoperimetry](https://arxiv.org/pdf/2105.12806.pdf)**
+Authors: Sébastien Bubeck, Mark Sellke (2023)
+Publication: Journal of the ACM
 
-- The paper investigates the concept of robustness in machine learning models, particularly focusing on the mathematical principles that govern this property.
-- The authors propose a universal law of robustness, which they derive from the isoperimetric inequality, a fundamental concept in geometry and analysis.
-- The law provides a bound on the robustness of a model, given the model's accuracy and the complexity of the classification problem.
-- The authors argue that this law applies to all models and datasets, regardless of their specific characteristics.
-- The paper concludes that the trade-off between accuracy and robustness is a fundamental aspect of machine learning, and that improving one often comes at the expense of the other.
+* The paper proposes a theoretical explanation for the phenomenon in deep learning where models are trained with many more parameters than what classical theory would suggest. The authors prove that for a broad class of data distributions and model classes, overparametrization is necessary for smooth interpolation of the data.
+* The authors show that smooth interpolation requires d times more parameters than mere interpolation, where d is the ambient data dimension. This law is proven for any smoothly parametrized function class with polynomial size weights, and any covariate distribution verifying isoperimetry (or a mixture thereof).
+* The paper suggests that the large size of the models used in deep learning might be a necessity rather than a weakness of the framework. It presents a tradeoff between the size of a model (as measured by the number of parameters) and its “robustness” (as measured by its Lipschitz constant).
+* The authors extend a previously conjectured tradeoff for the specific case of two-layer neural networks and Gaussian data to a much more general phenomenon that applies to essentially any parametrized function class and a much broader class of data distributions.
+* The paper concludes with the universal law of robustness, stating that for any function class smoothly parametrized by p parameters, and for any d-dimensional dataset satisfying a natural isoperimetry condition, any function in this class that fits the data below the noise level must have a (Euclidean) Lipschitz constant of order at least √(nd/p).
+
 
 **[Adversarial Examples are not Bugs, they are Features](https://proceedings.neurips.cc/paper/2019/file/e2c420d928d4bf8ce0ff2ec19b371514-Paper.pdf)**
 Authors: Andrew Ilyas, Shibani Santurkar, Dimitris Tsipras, Logan Engstrom, Brandon Tran, Aleksander Madry (2019)
@@ -86,15 +87,15 @@ Publication: NeurIPS
 - The paper also discusses adversarial transferability, suggesting that since any two models are likely to learn similar non-robust features, perturbations that manipulate such features will apply to both.
 - The authors conclude that adversarial vulnerability is a human-centric phenomenon, and that non-robust features can be as important as robust ones from the perspective of standard supervised learning.
 
-**[Understanding the failure modes of out-of-distribution generalization](https://arxiv.org/pdf/2010.15775.pdf)**
-Authors: Vaishaal Shankar, Alex Fang, Wenshuo Guo, Sara Fridovich-Keil, Ludwig Schmidt, Jonathan Ragan-Kelley, Benjamin Recht, Moritz Hardt, John Miller, Ludwig Schmidt (2022)
-Publication: arXiv
+[Understanding the Failure Modes of Out-of-Distribution Generalization](https://arxiv.org/pdf/2010.15775.pdf)
+Authors: Vaishnavh Nagarajan, Anders Andreassen, Behnam Neyshabur (2021)
+Publication: ICLR 2021
 
-- This paper investigates the failure modes of out-of-distribution (OOD) generalization in machine learning models. It specifically focuses on the brittleness of models when faced with distribution shifts, which is a crucial issue for the reliability of machine learning systems.
-- The authors propose a new framework, the "OOD generalization triangle", to understand the relationship between in-distribution generalization, OOD generalization, and distribution shift.
-- The paper shows that the OOD generalization error can be decomposed into three components: in-distribution error, shift magnitude, and shift direction. This decomposition helps in understanding the failure modes of OOD generalization.
-- The authors demonstrate that the shift direction, which is often ignored in the existing literature, plays a crucial role in determining the OOD generalization error.
-- The paper concludes that understanding the shift direction is key to improving the robustness of machine learning models against distribution shifts.
+* The paper investigates the nature of failure in machine learning models when faced with out-of-distribution (OoD) generalization, particularly in situations where models rely on spurious features that are only significantly correlated with labels during training.
+* The authors study the characteristic failure of the Empirical Risk Minimization (ERM) principle during OoD generalization, providing an understanding of why ERM tends to fail even in tasks that should be easy to learn based on fully predictive invariant features. The study is focused on gradient-descent-trained linear classifiers.
+* Two distinct modes of ERM failure are identified, both emerging from how spurious correlations induce different types of skews in data: one skew is geometric, while the other is statistical.
+* The authors propose a set of constraints for the design of tasks to ensure their "ease" of success, such as making the invariant feature fully predictive of the label. These constraints establish both a theoretical and empirical test-bed for reasoning about OoD generalization.
+* Experimentally, these theoretical insights are validated using MNIST and CIFAR10-based tasks and applied to fully-connected networks (FNNs) and ResNets. The authors demonstrate that in any easy-to-learn task devoid of these geometric or statistical skews, these models do not rely on spurious features, suggesting these skews are both a sufficient and necessary factor for failure in easy-to-learn tasks.
 
 **[Accuracy on the Line: On the Strong Correlation Between Out-of-Distribution and In-Distribution Generalization](https://arxiv.org/pdf/2107.04649.pdf)**
 Authors: John Miller, Rohan Taori, Aditi Raghunathan, Shiori Sagawa, Pang Wei Koh, Vaishaal Shankar, Percy Liang, Yair Carmon, Ludwig Schmidt (2022)
@@ -173,7 +174,7 @@ Publication: arXiv
 ## Distribution shifts
 
 **[Domain-adversarial training of neural networks](https://arxiv.org/pdf/1505.07818.pdf)**
-Authors: Ganin, Y., Ustinova, E., Ajakan, H., Germain, P., Larochelle, H., Laviolette, F., Marchand, M., & Lempitsky, V. (2016)
+Authors: Caron M., Ganin, Y., Ustinova, E., Ajakan, H., Germain, P., Larochelle, H., Laviolette, F., Marchand, M., & Lempitsky, V. (2016)
 Publication: The Journal of Machine Learning Research
 
 - The paper introduces a new approach for domain adaptation in deep networks, called Domain-Adversarial Neural Network (DANN). The approach aims to learn a feature representation that is useful for the learning task and is also invariant to the change of domains.
@@ -215,7 +216,7 @@ Publication: arXiv preprint
 - The paper concludes that prompt tuning is a promising method for adapting large language models, offering a balance between performance and efficiency, and that it opens up several avenues for future research.
 
 **[Scaling laws for neural language models](https://arxiv.org/pdf/2001.08361.pdf)**
-Authors: Tom B. Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared Kaplan, Prafulla Dhariwal, Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda Askell, Sandhini Agarwal, Ariel Herbert-Voss, Gretchen Krueger, Tom Henighan, Rewon Child, Aditya Ramesh, Daniel M. Ziegler, Jeffrey Wu, Clemens Winter, Christopher Hesse, Mark Chen, Eric Sigler, Mateusz Litwin, Scott Gray, Benjamin Chess, Jack Clark, Christopher Berner, Sam McCandlish, Alec Radford, Ilya Sutskever, and Dario Amodei (2020)
+Authors: OpenAI (2020)
 Publication: arXiv
 
 - The paper investigates the relationship between the performance of neural language models and their scale, in terms of model size, dataset size, and the amount of computation.
@@ -237,7 +238,7 @@ Publication: arXiv
 ## Benchmarking LLMs
 
 **[Beyond the imitation game: quantifying and extrapolating the capabilities of language models](https://arxiv.org/pdf/2206.04615.pdf)**
-Authors: Tom B. Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared Kaplan, Prafulla Dhariwal, Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda Askell, Sandhini Agarwal, Ariel Herbert-Voss, Gretchen Krueger, Tom Henighan, Rewon Child, Aditya Ramesh, Daniel M. Ziegler, Jeffrey Wu, Clemens Winter, Christopher Hesse, Mark Chen, Eric Sigler, Mateusz Litwin, Scott Gray, Benjamin Chess, Jack Clark, Christopher Berner, Sam McCandlish, Alec Radford, Ilya Sutskever, and Dario Amodei (2022)
+Authors: OpenAI (2022)
 Publication: arXiv
 
 - The paper investigates the capabilities of large language models, specifically focusing on GPT-3, and proposes a new methodology to quantify and extrapolate their performance.

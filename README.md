@@ -24,14 +24,15 @@ Publication: arXiv
 - The paper suggests that these findings could have significant implications for neural network initialization and for understanding why large, over-parameterized networks are easier to train.
 - The authors conclude by proposing future research directions, including the exploration of whether these principles apply to other forms of networks and tasks, and how these "winning tickets" can be found more efficiently.
 
-[**[Exploring Generalization in Deep Learning](https://proceedings.neurips.cc/paper/2017/file/10ce03a1ed01077e3e289f3e53c72813-Paper.pdf)**
-Authors: Chiyuan Zhang, Samy Bengio, Moritz Hardt, Benjamin Recht, Oriol Vinyals (2017)
-Publication: NIPS Proceedings
+**[Exploring Generalization in Deep Learning](https://proceedings.neurips.cc/paper/2017/file/10ce03a1ed01077e3e289f3e53c72813-Paper.pdf)**
+Authors: Behnam Neyshabur, Srinadh Bhojanapalli, David McAllester, Nathan Srebro (2017)
+Publication: NeurIPS 2017
 
-- The paper investigates the generalization capabilities of deep learning models, specifically questioning the traditional view that a model's ability to generalize well is tied to its capacity (number of parameters).
-- The authors demonstrate that deep learning models can perfectly fit random labels, a surprising result given that this should theoretically lead to poor generalization.
-- They further show that explicit regularization techniques (like weight decay or dropout) do not significantly improve generalization performance.
-- The paper concludes that these findings challenge our understanding of deep learning's generalization abilities and call for a rethinking of the theoretical foundations of deep learning.](https://proceedings.neurips.cc/paper/2017/file/10ce03a1ed01077e3e289f3e53c72813-Paper.pdf)
+* The paper investigates what drives generalization in deep networks, considering several recently suggested explanations, including norm-based control, sharpness, and robustness.
+* The authors highlight the importance of scale normalization and make a connection between sharpness and PAC-Bayes theory.
+* The paper explores the bias introduced by algorithmic choices for neural networks and what ensures generalization in neural networks. It also discusses the relevant notion of complexity or capacity control.
+* The authors examine complexity measures that have recently been suggested, or could be considered, in explaining generalization in deep learning. They evaluate the measures based on their ability to theoretically guarantee generalization, and their empirical ability to explain several recently observed empirical phenomena.
+* The paper concludes that studying how each measure can guarantee generalization allows for a better understanding of how it should be computed and compared in order to explain the empirical phenomena. The authors also emphasize the importance of relating the scale of the parameters and the scale of the output of the network, e.g., by relating norm and margin.
 
 **[The Implicit Bias of Gradient Descent on Separable Data](https://www.jmlr.org/papers/volume19/18-188/18-188.pdf)**
 Authors: Daniel Soudry, Elad Hoffer, Mor Shpigel Nacson, Suriya Gunasekar, Nathan Srebro (2018)
